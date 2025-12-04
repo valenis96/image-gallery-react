@@ -1,8 +1,9 @@
+import type { ImageInfo } from '../../assets/models'
 import './Image.css'
 
-function Image(props: { img: string, alt: string }) {
+function Image(props: ImageInfo) {
   return (
-    <img src={props.img} alt={props.alt} />
+    <img src={props.url} alt={props.alt} />
   )
 }
 

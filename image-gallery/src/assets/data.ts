@@ -1,4 +1,6 @@
-export const imgs = [
+import type { ImageInfo } from "./models";
+
+export const imgs: ImageInfo[] = [
   { id: '38', url: 'https://picsum.photos/id/38/400/400/', alt: 'Clouds' },
   { id: '39', url: 'https://picsum.photos/id/39/400/400/', alt: 'Music' },
   { id: '40', url: 'https://picsum.photos/id/40/400/400/', alt: 'Cat Nose' },
