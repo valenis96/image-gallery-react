@@ -1,26 +1,17 @@
-import reactLogo from '../../assets/react.svg'
+import { imgs } from '../../assets/data'
+import Image from '../image/Image'
 import './Gallery.css'
-
-function Image() {
-  return (
-    <img src={reactLogo} className="logo react" alt="React logo" />
-  )
-}
 
 function Gallery() {
   return (
-    <div className="gallery">
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
+    <div className='container'>
+      <div className="gallery">
+        {imgs.map((img) => (
+          <Image img={img.url} alt={img.alt} />
+        ))}
+      </div>
     </div>
+
   )
 }
 

@@ -1,9 +1,8 @@
-import reactLogo from '../../assets/react.svg'
 import './Image.css'
 
-function Image() {
+function Image(props: { img: string, alt: string }) {
   return (
-    <img src={reactLogo} className="logo react" alt="React logo" />
+    <img src={props.img} alt={props.alt} />
   )
 }
 
