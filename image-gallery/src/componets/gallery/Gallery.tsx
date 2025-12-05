@@ -4,8 +4,8 @@ import Image from '../image/Image'
 
 function Gallery() {
   return (
-    <div className='justify-center mb-[4em]'>
-      <div className="grid grid-cols-[repeat(6,100px)] gap-[10px]">
+    <div className='mb-[4em]'>
+      <div className="grid grid-cols-[repeat(auto-fill,100px)] gap-[10px] justify-center lg:w-[700px]">
         {imgs.map((img: ImageInfo, index) => (
           <Image
             id={img.id}
