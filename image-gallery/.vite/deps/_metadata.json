@@ -1,0 +1,40 @@
+{
+  "hash": "ae8153aa",
+  "configHash": "2ee79af4",
+  "lockfileHash": "2f7e283f",
+  "browserHash": "a7f06a68",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "4a1b6eed",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f8ad9275",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "fc7a35f3",
+      "needsInterop": true
+    },
+    "tailwindcss": {
+      "src": "../../node_modules/tailwindcss/dist/lib.mjs",
+      "file": "tailwindcss.js",
+      "fileHash": "e436423e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-KGQ2KX7E": {
+      "file": "chunk-KGQ2KX7E.js"
+    },
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
+    }
+  }
+}

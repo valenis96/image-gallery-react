@@ -3,3 +3,7 @@ export interface ImageInfo {
   url: string,
   alt: string
 }
+
+export interface ImageProps extends ImageInfo {
+  index: number;
+}

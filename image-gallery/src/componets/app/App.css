@@ -2,4 +2,13 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+
+@layer base {
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
