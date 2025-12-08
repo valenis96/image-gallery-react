@@ -15,15 +15,15 @@ describe("App component", () => {
   test("First image have to be bigger", () => {
     render(<Image index={0} id={imgs[0].id} url={imgs[0].url} alt={imgs[0].alt} />);
 
-    const image = screen.getByRole("img");
-    expect(image.classList.toString()).toBe("col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center");
+    const image = screen.getAllByTestId("image");
+    expect(image[0].classList.toString()).contain("col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center");
   });
 
   test("If is not the first image, the style is different", () => {
     render(<Image index={1} id={imgs[1].id} url={imgs[1].url} alt={imgs[1].alt} />);
 
-    const image = screen.getByRole("img");
-    expect(image.classList.toString()).toBe("w-[100px] h-[100px] object-cover object-center");
+    const image = screen.getAllByTestId("image");
+    expect(image[0].classList.toString()).contain("w-[100px] h-[100px] object-cover object-center");
   });
 
   test("la stringa è un URL valido", () => {

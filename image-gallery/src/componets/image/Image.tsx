@@ -1,16 +1,27 @@
 import type { ImageProps } from '../../assets/models'
 
 function Image(props: ImageProps) {
+  const classesGrid = props.index === 0
+    ? "col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center relative"
+    : "w-[100px] h-[100px] object-cover object-center relative"
+
+
+
   return (
-    <img
-      src={props.url}
-      alt={props.alt}
-      className={
-        props.index === 0
-          ? "col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center"
-          : "w-[100px] h-[100px] object-cover object-center"
-      }
-      tabIndex={0} />
+    <>
+      <span data-testid="image" className={`relative ${classesGrid} group`}>
+        <div className='invisible absolute top-[5px] right-[8px] bg-white 
+          px-[6px] rounded-full cursor-pointer group-hover:visible'
+          onClick={() => props.onButtonClick(props.id)}>
+          X
+        </div>
+
+        <img
+          src={props.url}
+          alt={props.alt}
+          tabIndex={0} />
+      </span >
+    </>
   )
 }
 
