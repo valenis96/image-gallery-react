@@ -4,10 +4,12 @@ import type { ImageInfo } from '../../assets/models'
 import Image from '../image/Image'
 
 function Gallery() {
-  const [images, setItems] = useState<ImageInfo[]>(imgs);
+  const [images, setImages] = useState<ImageInfo[]>(imgs);
 
   const deleteImage = (id: string) => {
-    setItems(prevImages => prevImages.filter(image => image.id !== id));
+    if (window.confirm('Are you sure to delete this image?')) {
+      setImages(images.filter(img => img.id !== id));
+    }
   };
 
   return (
