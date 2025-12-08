@@ -10,11 +10,12 @@ function Image(props: ImageProps) {
   return (
     <>
       <span data-testid="image" className={`relative ${classesGrid} group`}>
-        <div className='invisible absolute top-[5px] right-[8px] bg-white 
+        <button className='invisible absolute top-[5px] right-[8px] bg-white 
           px-[6px] rounded-full cursor-pointer group-hover:visible'
-          onClick={() => props.onButtonClick(props.id)}>
+          onClick={() => props.onButtonClick(props.id)}
+          data-testid="delete">
           X
-        </div>
+        </button>
 
         <img
           src={props.url}
