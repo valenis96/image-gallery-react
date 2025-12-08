@@ -19,7 +19,6 @@ describe("App component", () => {
 
   test("on click on the button the page scroll up", async () => {
     const user = userEvent.setup();
-
     const button = screen.getByRole("button", { name: /ArrowUpIcon/i });
     await user.click(button);
 
