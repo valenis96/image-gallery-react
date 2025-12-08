@@ -9,7 +9,8 @@ function Image(props: ImageProps) {
         props.index === 0
           ? "col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center"
           : "w-[100px] h-[100px] object-cover object-center"
-      } />
+      }
+      tabIndex={0} />
   )
 }
 
