@@ -6,21 +6,21 @@ import { imgs } from "@/assets/data";
 
 describe("App component", () => {
   test("Image is render in the app", () => {
-    render(<Image index={0} id={imgs[0].id} url={imgs[0].url} alt={imgs[0].alt} onButtonClick={undefined} />);
+    render(<Image index={0} id={imgs[0].id} url={imgs[0].url} alt={imgs[0].alt} onButtonClick={() => console.log('')} />);
     const image = screen.getByRole("img");
 
     expect(image).toBeInTheDocument();
   });
 
   test("First image have to be bigger", () => {
-    render(<Image index={0} id={imgs[0].id} url={imgs[0].url} alt={imgs[0].alt} onButtonClick={undefined} />);
+    render(<Image index={0} id={imgs[0].id} url={imgs[0].url} alt={imgs[0].alt} onButtonClick={() => console.log('')} />);
     const image = screen.getAllByTestId("image");
 
     expect(image[0].classList.toString()).contain("col-span-3 row-span-3 w-[320px] h-[320px] object-cover object-center");
   });
 
   test("If is not the first image, the style is different", () => {
-    render(<Image index={1} id={imgs[1].id} url={imgs[1].url} alt={imgs[1].alt} onButtonClick={undefined} />);
+    render(<Image index={1} id={imgs[1].id} url={imgs[1].url} alt={imgs[1].alt} onButtonClick={() => console.log('')} />);
     const image = screen.getAllByTestId("image");
 
     expect(image[0].classList.toString()).contain("w-[100px] h-[100px] object-cover object-center");
