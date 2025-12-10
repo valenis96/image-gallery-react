@@ -6,5 +6,5 @@ export interface ImageInfo {
 
 export interface ImageProps extends ImageInfo {
   index: number;
-  onButtonClick: any;
+  onButtonClick: (id: string) => void;
 }
