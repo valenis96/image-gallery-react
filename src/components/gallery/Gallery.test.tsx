@@ -8,7 +8,7 @@ describe("Gallery component", () => {
     render(<Gallery />);
   });
 
-  test("renderizza tanti Image quanti ne contiene imgs", () => {
+  test("render images", () => {
     const images = screen.getAllByTestId("image");
     expect(images.length).toBe(imgs.length);
   });
