@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# My first React App: Image Gallery 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the project
 
-Currently, two official plugins are available:
+This project it's a gallery of images
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Registrazione+2025-12-08+203407](https://github.com/user-attachments/assets/0e3a76ac-940e-4db4-9117-c2aa95a08939)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Objectives
 
-## Expanding the ESLint configuration
+- First steps with React
+- Visualization of a responsive grid of images
+- Handle the principal image (the first one)
+- Elimination of images
+- Develop tests
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```
+├── scr
+│ ├── assets/
+│ │   ├── data.ts
+│ │   └── models.ts
+│ ├── components/
+│ │   ├── app
+│ │   │    ├── App.css
+│ │   │    ├── App.test.tsx
+│ │   │    └── App.tsx
+│ │   ├── gallery
+│ │   │    ├── Gallery.test.tsx
+│ │   │    └── Gallery.tsx
+│ │   ├── header
+│ │   │    └── Header.tsx
+│ │   └── image
+│ │        ├── Image.test.tsx
+│ │        └── Image.tsx
+│ ├── index.css
+| ├── main.tsx
+| └── setup-tests.ts
+├── package-lock.json
+├── package.json
+├── tsconfig.js
+├── vite.config.js
+├── index.html # Main landing page
+└── README.md # Project documentation
+```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Technologies Used
+
+- React
+- Tailwind
+- TypeScript
+- Vite
+- Shadcn-ui
+- Vitest
+
+## Usage
+
+1. Clone the repository
+
+```
+git clone https://github.com/valenis96/image-gallery-react.git
+```
 
 2. run 
 ```
-npm install
+git install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. run 
 ```
-npm run dev
+git run dev
 ```
 and open de localhost
 
