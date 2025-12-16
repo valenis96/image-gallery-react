@@ -65,12 +65,12 @@ git clone https://github.com/valenis96/image-gallery-react.git
 
 2. run 
 ```
-git install
+npm install
 ```
 
 3. run 
 ```
-git run dev
+npm run dev
 ```
 and open de localhost
 
