@@ -30,17 +30,9 @@ export default defineConfig([
       // Optionally, add this for stylistic rules
       tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. run 
+```
+npm install
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
@@ -71,3 +63,10 @@ export default defineConfig([
   },
 ])
 ```
+npm run dev
+```
+and open de localhost
+
+## Autor
+
+Valentina Maronese
