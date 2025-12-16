@@ -26,7 +26,7 @@ describe("App component", () => {
     expect(image[0].classList.toString()).contain("w-[100px] h-[100px] object-cover object-center");
   });
 
-  test("la stringa è un URL valido", () => {
+  test("the string of the URL is valid", () => {
     const myUrl = imgs[0].url;
 
     expect(() => new URL(myUrl)).not.toThrow();
